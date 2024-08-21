@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: linear-gradient(#000000a4,#000000a4),
+                url(/assets/bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: 15%;
+    background-position-x: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -300px; /* Sembunyikan sidebar awalnya */
+    transition: left 0.3s ease;
+}
+
+.sidebar.show {
+    left: 0; /* Tampilkan sidebar */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    flex: 1;
+    padding: 0;
+    color: white;
+    transition: margin-left 0.3s ease;
+    width: 100%;
+    margin-left: 0; /* Mulai dari tepi kiri saat sidebar tersembunyi */
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.content.shifted {
+    margin-left: 240px; /* Geser konten saat sidebar terlihat */
+}
+
+.toggle-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background-color: #00000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+header {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    height: 50px; /* Tentukan tinggi header */
+}
+
+header h1 {
+    margin: 0;
+    line-height: 50px; /* Sejajarkan teks secara vertikal */
+}

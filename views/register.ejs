@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Daftar</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Cok</h1>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <div id="alert"></div>
+            <input type="submit" value="Daftar">
+        </form>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+      if (error) {
+        document.getElementById('alert').innerHTML = error;
+      }
+    </script>
+</body>
+</html>

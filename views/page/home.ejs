@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+      <h2>Menu</h2>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/logout">Logout</a></li>
+      </ul>
+  </div>
+
+  <div class="content" id="content">
+
+      <header>
+          <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+          <h1>Home</h1>
+      </header>
+      <div class="container">
+          <h2>Selamat Datang Di Halaman Home</h2>
+          <p>Ini adalah contoh halaman home</p>
+      </div>
+  </div>
+
+  <script>
+      function toggleSidebar() {
+          const sidebar = document.getElementById('sidebar');
+          const content = document.getElementById('content');
+
+          sidebar.classList.toggle('show');
+          content.classList.toggle('shifted');
+      }
+  </script>
+
+</body>
+</html>

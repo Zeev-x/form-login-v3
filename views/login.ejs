@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Cok</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div id="alert"></div>
+            <input type="submit" value="Login">
+            <div class="to-register">
+                Don't have an account? <a href="/register">Register here</a>
+            </div>
+        </form>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+      if (error) {
+        document.getElementById('alert').innerHTML = error;
+      }
+    </script>
+</body>
+</html>
