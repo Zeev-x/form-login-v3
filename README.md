@@ -4,7 +4,7 @@ Form login sederhana menggunakan nodejs
 ## Kelebihan
 ```
 - Mudah di gunakan
-- Di form-login-v2 ini ada tambahan fitur registrasi
+- Di form-login-v3 ini ada tambahan fitur registrasi
 - Log in menggunakan email
 ```
 
